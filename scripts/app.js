@@ -1,5 +1,6 @@
 // declaring services
 let cityService;
+
 // declaring controls / DOM elements
 let citySelect;
 
@@ -21,6 +22,8 @@ async function loadData() {
 
     const cities = await cityService.getAll();
 
+
+    // populating city select form
     let i = 0;
     cities.forEach(city => {
         const option = new Option(city.name, i);
